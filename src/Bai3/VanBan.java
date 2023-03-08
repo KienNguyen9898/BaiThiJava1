@@ -1,5 +1,7 @@
 package Bai3;
 
+import java.util.StringTokenizer;
+
 public class VanBan {
     private String chuoiKiTu;
 
@@ -17,18 +19,18 @@ public class VanBan {
     public void setChuoiKiTu(String chuoiKiTu) {
         this.chuoiKiTu = chuoiKiTu;
     }
+
     public int demVb(){
-        int demVb = 0;
-        char ch[] = new char[chuoiKiTu.length()];
-        for (int i=0; i< chuoiKiTu.length();i++ ){
-            ch[i] = chuoiKiTu.charAt(i);
-            if (((i>0) && (ch[i] !=' ')) && (ch[i-1] ==' ')){
-                demVb++;
-            }
-            return demVb;
+        return chuoiKiTu.length();
         }
+
+    public String vietHoa(){
+        return chuoiKiTu.toUpperCase();
     }
 
+    public String vietThuong(){
+        return chuoiKiTu.toLowerCase();
+    }
     @Override
     public String toString() {
         return "VanBan[" +
